@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import formImg from "../assets/goal-form-pic.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import '../styles/NewUser.css'
 
 
 const NewUser = () => {
@@ -39,12 +40,12 @@ const NewUser = () => {
 
   return (
     <main className="container pt-4">
-      <div className="row justify-content-between">
+      <div className="row justify-content-evenly ">
         <div className="col-sm-12 col-md-6 ">
-          <Form className="">
+          <Form className="p-3 shadow-lg">
             <fieldset>
               <Form.Group className="mb-3">
-                <Form.Label htmlFor="disabledTextInput">Name:</Form.Label>
+                <Form.Label htmlFor="disabledTextInput" className="fw-bold" >Name:</Form.Label>
                 <Form.Control
                   id="disabledTextInpu"
                   placeholder="Disabled input"
@@ -52,7 +53,7 @@ const NewUser = () => {
                   onChange={(e) => setName(e.target.value)}
                 />
               </Form.Group>
-              <Form.Group className="mb-3">
+              <Form.Group className="mb-3 fw-bold">
                 <Form.Label htmlFor="disabledSelect">Email:</Form.Label>
                 <Form.Control
                   id="disabledTextInpu"
@@ -61,7 +62,7 @@ const NewUser = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </Form.Group>
-              <Form.Group className="mb-3">
+              <Form.Group className="mb-3 fw-bold">
                 <Form.Label htmlFor="disabledSelect">Profession:</Form.Label>
                 <Form.Control
                   id="disabledTextInpu"
@@ -71,7 +72,7 @@ const NewUser = () => {
                 />
               </Form.Group>
               <Form.Group className="mb-3">
-                <Form.Label htmlFor="disabledSelect">Profession:</Form.Label>
+                <Form.Label htmlFor="disabledSelect" className="fw-bold"  >Profession:</Form.Label>
                 <Form.Select
                   value={gender}
                   onChange={(e) => setGender(e.target.value)}
@@ -89,7 +90,7 @@ const NewUser = () => {
           </Form>
         </div>
         <div className="d-none d-lg-block col-lg-5">
-          <img src={formImg} alt="formImage" className="img-fluid" />
+          <img src={formImg} alt="formImage" className="img-flui p-2 shadow-sm" />
         </div>
       </div>
     </main>
