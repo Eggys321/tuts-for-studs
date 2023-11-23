@@ -1,8 +1,36 @@
-# React + Vite
+# vite + react
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Welcome! 👋
 
-Currently, two official plugins are available:
+Practice project for my Trainees
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Thanks for checking out this application.
+
+This was created using react for frontend and nodeJs for backend.
+
+## The site
+
+MERN app for  showing tasks.
+
+The project is a task manager app,for just creating,editing,delting and getting all tasks saved to the database and viewed on the frontend(React)
+
+
+## Building your project
+## ________________________
+Feel free to use. 
+Below is the process to get the project running:
+
+1. nodeJs software if not installed
+2. ejs
+3. expressJs
+4. nodemon
+5. mongoose
+6. morgan
+7. mongoDb
+8. vite
+
+
+
+## Deploying your project
+gitHub
+render

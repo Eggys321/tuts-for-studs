@@ -1,38 +1,35 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const validator = require("validator");
 // const bcrypt = require("bcryptjs");
 
-
-
-const userRoleSchema = new Schema({
-    name:{
-        type:String,
-        required:[true, 'name is required'],
-        trim:true
+const userRoleSchema = new Schema(
+  {
+    name: {
+      type: String,
+      required: [true, "name is required"],
+      trim: true,
     },
-    email:{
-        type:String,
-        required:[true, 'email is required'],
-        unique: true,
-        lowercase: true,
-        trim:true,
-        validate(value) {
-          if (!validator.isEmail(value)) {
-            throw new Error("Email is invalid");
-          }
-        },
-        
+    email: {
+      type: String,
+      required: [true, "email is required"],
+      unique: true,
+      lowercase: true,
+      trim: true,
+      validate(value) {
+        if (!validator.isEmail(value)) {
+          throw new Error("Email is invalid");
+        }
+      },
     },
-    profession:{
-        type:String,
-        required:[true,'profession is required']
+    profession: {
+      type: String,
+      required: [true, "profession is required"],
     },
-    gender:{
-        type:String,
-        enum:['male','female'],
-        required:[true,'select a gender']
-
+    gender: {
+      type: String,
+      enum: ["male", "female"],
+      required: [true, "select a gender"],
     },
     // password: {
     //     type: String,
@@ -45,11 +42,13 @@ const userRoleSchema = new Schema({
     //       }
     //     },
     //   },
-    date:{
-        type:Date,
-        default:Date.now()
-    }
-},{timestamps:true})
+    date: {
+      type: Date,
+      default: Date.now(),
+    },
+  },
+  { timestamps: true }
+);
 
 // userRoleSchema.pre("save", async function (next) {
 //     const user = this;
@@ -59,6 +58,5 @@ const userRoleSchema = new Schema({
 //     next();
 //   });
 
-const USER_ROLE = mongoose.model('User',userRoleSchema);
-module.exports = USER_ROLE
-
+const USER_ROLE = mongoose.model("User", userRoleSchema);
+module.exports = USER_ROLE;

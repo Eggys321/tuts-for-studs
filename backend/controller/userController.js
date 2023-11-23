@@ -23,7 +23,7 @@ const create_user = async (req,res)=>{
 const getAll_users = async(req,res)=>{
     try {
         const users = await USER_ROLE.find({});
-        if(users.length < 1)return res.json({msg:'No users found'}) 
+        if(users.length < 1)return res.status(404).json({msg:'No users found'}) 
         res.status(200).json({users})
         
     } catch (error) {
